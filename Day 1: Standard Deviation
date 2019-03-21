@@ -1,0 +1,16 @@
+# Enter your code here. Read input from STDIN. Print output to STDO
+from math import sqrt
+value =int(input())
+valueList = [int(x) for x in input().split()]
+
+valueList.sort()
+mean = sum(valueList)/len(valueList)
+index=[]
+for i in valueList:
+    a = i-mean
+    s =a**2
+    index.append(s)
+total =sum(index)
+Root =sqrt(total/len(valueList))
+print(Root)
+
