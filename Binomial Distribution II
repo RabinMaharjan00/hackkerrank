@@ -1,0 +1,17 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+from math import factorial 
+percentage,no_of_piston = map(int,input().split())
+
+
+def comb(n,x):
+    return factorial(n)/(factorial(x)*factorial(n-x))
+
+def b(n,x,p):
+    return comb(n,x)*p**x*(1-p)**(n-x)
+
+print(round(sum([b(no_of_piston,i,percentage/100) for i in range(3)]),3))
+print(round(sum([b(no_of_piston,i,percentage/100) for i in range(2,no_of_piston+1)]),3))
+
+
+
