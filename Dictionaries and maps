@@ -1,0 +1,23 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+n = int(input())
+persion ={}
+for i in range(0,n):
+    pbook = str(input()).split(" ")
+    name = pbook[0]
+    num = int(pbook[1])
+    persion[name] = num
+
+for j in range(0,n):
+    name = str(input())
+
+    if name in persion:
+        phone = persion[name]
+        print(name + "=" + str(phone))
+    else:
+        print("Not found")
+
+
+
+
+
